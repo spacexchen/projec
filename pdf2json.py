@@ -26,7 +26,7 @@ def extract_text_image(from_file,to_file, lang='deu', image_type='jpeg', resolut
 
 
 def parse_text(from_file,to_file):
-    tf = open(to_file,"w")
+    tf = open(to_file,"w",encoding='utf-8')
     print("-- Parsing text", from_file, "--")
     text_raw = parser.from_file(from_file)
     print("---------------------------------")
@@ -41,6 +41,6 @@ def pdf2txt(from_file,to_file):
     # extract_text_image(from_file, to_file)
 
 if __name__ == '__main__':
-    from_file = "ADAMoracle (Mining)_audit.pdf"
-    to_file = "test.txt"
+    from_file = "pdf/dForceLending-Audit-Report-Consensys-Mar-2021.pdf"
+    to_file = "txt/test3.txt"
     pdf2txt(from_file,to_file)
